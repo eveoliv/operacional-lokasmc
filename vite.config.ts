@@ -29,7 +29,9 @@ export default defineConfig({
         }),
         wayfinder({
             formVariants: true,
-            command: '/opt/homebrew/opt/php/bin/php artisan wayfinder:generate',
+            command:
+                process.env.WAYFINDER_COMMAND ??
+                'php artisan wayfinder:generate',
         }),
     ],
 });
