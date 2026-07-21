@@ -15,6 +15,10 @@ public/hot
 public_html/storage
 public_html/hot
 
+# Claude Code - config
+.claude
+.claude/settings.local.json
+
 storage/*.key
 .env
 Homestead.yaml
