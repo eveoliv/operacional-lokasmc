@@ -15,6 +15,7 @@ class ProfileUpdateRequest extends FormRequest
      *
      * @return array<string, ValidationRule|array<mixed>|string>
      */
+    /** @return array<string, mixed> */
     public function rules(): array
     {
         return $this->profileRules($this->user()->id);

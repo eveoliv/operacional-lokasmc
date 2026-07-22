@@ -46,6 +46,14 @@ class UserFactory extends Factory
         ]);
     }
 
+    public function disabled(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'disabled_at' => now(),
+            'disabled_reason' => 'Account disabled for testing.',
+        ]);
+    }
+
     /**
      * Indicate that the model has two-factor authentication configured.
      */
